@@ -30,8 +30,19 @@ var lowercase = confirm("Would you like lowercase characters?")
     console.log(possibleValues)
   }else {
   }
+
 var numbers = confirm("Would you like numbers?")
+  if (numbers === true) {
+    possibleValues = possibleValues + "0123456789"
+    console.log(possibleValues)
+  }else {
+
+  }
 var spchar = confirm("Would you like special characters?")
+  if (spchar === true) {
+    possibleValues = possibleValues + "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+    console.log(possibleValues)
+  }
 var characters = prompt("How many characters?")
 
 var generatePassword 
