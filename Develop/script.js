@@ -13,17 +13,25 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-var possibleValues = 
+var possibleValues = ""
 
-var uppercase = confirm("Would you ike uppercase characters?")
-  if {
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var uppercase = confirm("Would you ike uppercase characters?") 
+  if (uppercase === true) {
+    possibleValues = possibleValues + "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    console.log(possibleValues);
   } else {
-    "abcdefghijklmnopqrstuvwxyz"
+
+    console.log(uppercase)
   }
+
 var lowercase = confirm("Would you like lowercase characters?")
+  if (lowercase === true) {
+    possibleValues = possibleValues + "abcdefghijklmnopqrstuvwxyz";
+    console.log(possibleValues)
+  }else {
+  }
 var numbers = confirm("Would you like numbers?")
 var spchar = confirm("Would you like special characters?")
 var characters = prompt("How many characters?")
 
-var generatePassword = (uppercase === "true")
+var generatePassword 
