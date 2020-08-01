@@ -14,7 +14,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword); 
 
 
-var possibleValues = []
+var possVal = []
 var upVal = 
     ['A', "B", 'C', 'D', 'E', 'F', 'G', 'H', 'I', 
     'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 
@@ -36,24 +36,24 @@ var charVal = parseInt(prompt("How many characters?"))
 var chosnVal = []
 
 if (confirm("Would you ike uppercase characters?")) {
-  possibleValues.push(upVal)
+  possVal.push(upVal)
 } 
 
 if (confirm("Would you like lowercase characters?")) {
-  possibleValues.push(lowVal)
+  possVal.push(lowVal)
 }
 
 if (confirm("Would you like numbers?")) {
-  possibleValues.push(numVal)
+  possVal.push(numVal)
 }
 
 if (confirm("Would you like special characters?")) {
-  possibleValues.push(spVal)
-}console.log(possibleValues)
+  possVal.push(spVal)
+}console.log(possVal)
 
 for (var i = 0; i < charVal; i++){
-  var randomVAL = Math.floor(Math.random() * possibleValues.length)
-  var rdmPassVal = Math.floor(Math.random() * possibleValues[randomVAL].length)
+  var randomVAL = Math.floor(Math.random() * possVal.length)
+  var rdmPassVal = Math.floor(Math.random() * possVal[randomVAL].length)
   console.log(randomVAL, rdmPassVal)
 }
 
