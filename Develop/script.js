@@ -54,7 +54,8 @@ if (confirm("Would you like special characters?")) {
 for (var i = 0; i < charVal; i++){
   var randomVAL = Math.floor(Math.random() * possVal.length)
   var rdmPassVal = Math.floor(Math.random() * possVal[randomVAL].length)
-  console.log(randomVAL, rdmPassVal)
+  var pass = possVal[randomVAL][rdmPassVal]
+  console.log(randomVAL, rdmPassVal, pass)
 }
 
 
