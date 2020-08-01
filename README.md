@@ -13,4 +13,4 @@ This is a password generator that allows you to personalizes what you need in yo
 
 3.Answer whether you would like uppercase, lowercase, number, or special characters allowed in your password.
 
-Deployed: link
+Deployed: https://orlandoliddell.github.io/Password_Generator/
