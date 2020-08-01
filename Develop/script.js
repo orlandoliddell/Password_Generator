@@ -11,38 +11,50 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword); 
 
-var possibleValues = ""
 
-var uppercase = confirm("Would you ike uppercase characters?") 
-  if (uppercase === true) {
-    possibleValues = possibleValues + "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    console.log(possibleValues);
-  } else {
+var possibleValues = []
+var upVal = 
+    ['A', "B", 'C', 'D', 'E', 'F', 'G', 'H', 'I', 
+    'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 
+    'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+var lowVal = 
+    ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 
+    'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 
+    's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+var numVal = 
+    ['0', '1', '2', '3', '4', 
+    '5', '6', '7', '8', '9']
+var spVal = 
+    ['!', '#', '$', '%', '&', '(', "'", ')', '*', 
+    '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', 
+    '@', '[', ']', '^', '_', '{', '|', '}', '~']
 
-    console.log(uppercase)
-  }
+var charVal = parseInt(prompt("How many characters?"))
 
-var lowercase = confirm("Would you like lowercase characters?")
-  if (lowercase === true) {
-    possibleValues = possibleValues + "abcdefghijklmnopqrstuvwxyz";
-    console.log(possibleValues)
-  }else {
-  }
+var chosnVal = []
 
-var numbers = confirm("Would you like numbers?")
-  if (numbers === true) {
-    possibleValues = possibleValues + "0123456789"
-    console.log(possibleValues)
-  }else {
+if (confirm("Would you ike uppercase characters?")) {
+  possibleValues.push(upVal)
+} 
 
-  }
-var spchar = confirm("Would you like special characters?")
-  if (spchar === true) {
-    possibleValues = possibleValues + "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
-    console.log(possibleValues)
-  }
-var characters = prompt("How many characters?")
+if (confirm("Would you like lowercase characters?")) {
+  possibleValues.push(lowVal)
+}
+
+if (confirm("Would you like numbers?")) {
+  possibleValues.push(numVal)
+}
+
+if (confirm("Would you like special characters?")) {
+  possibleValues.push(spVal)
+}console.log(possibleValues)
+
+for (var i = 0; i < charVal; i++){
+  var randomVAL = Math.floor(Math.random() * possibleValues.length)
+  console.log(randomVAL)
+}
+
 
 var generatePassword 
