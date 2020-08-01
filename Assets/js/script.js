@@ -44,7 +44,7 @@ function generatePassword() {
     return generatePassword()
   }
 
-  if (confirm("Would you ike uppercase characters?")) {
+  if (confirm("Would you like uppercase characters?")) {
     possVal.push(upVal)
   }
 
